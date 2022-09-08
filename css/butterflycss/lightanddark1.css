@@ -1,0 +1,53 @@
+/* 日间模式页面调整  */
+[data-theme=light] {
+    --card-bg: rgba(255,255,255,.804) !important; /* 全局背景调整 */
+}
+
+/* 夜间模式页面调整 */
+[data-theme=dark] {
+    --card-bg: rgba(26, 27, 29, 0.644) !important; /* 全局背景调整 */
+    --btn-bg: #012c48 !important; /* 页面所有按钮夜间背景色 */
+}
+
+/* 那年今日 文字背景调整 */
+.swiper-wrapper .history_slide {
+    background: none;
+}
+
+/* 头像微调 */
+.flink-item-icon {
+    margin-right: 0 !important;
+    transition: .5s !important;
+}
+
+.flink-item-name,
+.flink-item-desc {
+    padding-left: 10px !important;
+}
+
+/* 去掉原来自带的before */
+#article-container .flink .flink-list>.flink-list-item::before {
+    content: none;
+}
+
+/* 鼠标经过改变背景 */
+#article-container .flink .flink-list>.flink-list-item:hover {
+    background-color: #FF69B422;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+}
+
+/* 鼠标经过改变文字颜色 */
+/* #article-container .flink .flink-list>.flink-list-item:hover a {
+    color: white !important;
+} */
+
+/* 鼠标经过头像滚动 */
+#article-container .flink .flink-list>.flink-list-item:hover .flink-item-icon {
+    width: 60px;
+    margin-left: -70px;
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
