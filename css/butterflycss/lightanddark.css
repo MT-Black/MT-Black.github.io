@@ -53,12 +53,12 @@
 }
 
 /* 全站变灰 */
-* {
+/* * {
     filter: grayscale(100%);
-}
+} */
 
 /* 背景 */
-/* #web_bg {
+#web_bg {
     position: fixed;
     z-index: -999;
     width: 100%;
@@ -68,4 +68,4 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    } */
+    }
