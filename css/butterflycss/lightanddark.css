@@ -1,12 +1,15 @@
 /* 日间模式页面调整  */
 [data-theme=light] {
-    --card-bg: rgba(255,255,255,.804) !important; /* 全局背景调整 */
+    --card-bg: rgba(255, 255, 255, .804) !important;
+    /* 全局背景调整 */
 }
 
 /* 夜间模式页面调整 */
 [data-theme=dark] {
-    --card-bg: rgba(26, 27, 29, 0.644) !important; /* 全局背景调整 */
-    --btn-bg: #012c48 !important; /* 页面所有按钮夜间背景色 */
+    --card-bg: rgba(26, 27, 29, 0.644) !important;
+    /* 全局背景调整 */
+    --btn-bg: #012c48 !important;
+    /* 页面所有按钮夜间背景色 */
 }
 
 /* 那年今日 文字背景调整 */
@@ -53,10 +56,11 @@
 }
 
 /* 全站变灰 */
-/* * {
-    filter: grayscale(100%);
-} */
-html {overflow-y:scroll;filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-filter: grayscale(100%);}
+html {
+    overflow-y: scroll;
+    filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+    -webkit-filter: grayscale(100%);
+}
 
 /* 背景 */
 #web_bg {
@@ -69,4 +73,4 @@ html {overflow-y:scroll;filter:progid:DXImageTransform.Microsoft.BasicImage(gray
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    }
+}
