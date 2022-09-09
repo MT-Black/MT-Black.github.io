@@ -56,11 +56,11 @@
 }
 
 /* 全站变灰 */
-html {
+/* html {
     overflow-y: scroll;
     filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
     -webkit-filter: grayscale(100%);
-}
+} */
 
 /* 背景 */
 #web_bg {
