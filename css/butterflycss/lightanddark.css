@@ -74,3 +74,210 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+/* 顶部加载条 */
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .pace-inactive {
+    display: none;
+  }
+  
+  .pace .pace-progress {
+    background: #e90f92;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 2px;
+  }
+  
+  .pace .pace-progress-inner {
+    display: block;
+    position: absolute;
+    right: 0px;
+    width: 100px;
+    height: 100%;
+    box-shadow: 0 0 10px #e90f92, 0 0 5px #e90f92;
+    opacity: 1.0;
+    -webkit-transform: rotate(3deg) translate(0px, -4px);
+    -moz-transform: rotate(3deg) translate(0px, -4px);
+    -ms-transform: rotate(3deg) translate(0px, -4px);
+    -o-transform: rotate(3deg) translate(0px, -4px);
+    transform: rotate(3deg) translate(0px, -4px);
+  }
+  
+  .pace .pace-activity {
+    display: block;
+    position: fixed;
+    z-index: 2000;
+    top: 15px;
+    right: 15px;
+    width: 14px;
+    height: 14px;
+    border: solid 2px transparent;
+    border-top-color: #e90f92;
+    border-left-color: #e90f92;
+    border-radius: 10px;
+    -webkit-animation: pace-spinner 400ms linear infinite;
+    -moz-animation: pace-spinner 400ms linear infinite;
+    -ms-animation: pace-spinner 400ms linear infinite;
+    -o-animation: pace-spinner 400ms linear infinite;
+    animation: pace-spinner 400ms linear infinite;
+  }
+  
+  @-webkit-keyframes pace-spinner {
+    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+  }
+  @-moz-keyframes pace-spinner {
+    0% { -moz-transform: rotate(0deg); transform: rotate(0deg); }
+    100% { -moz-transform: rotate(360deg); transform: rotate(360deg); }
+  }
+  @-o-keyframes pace-spinner {
+    0% { -o-transform: rotate(0deg); transform: rotate(0deg); }
+    100% { -o-transform: rotate(360deg); transform: rotate(360deg); }
+  }
+  @-ms-keyframes pace-spinner {
+    0% { -ms-transform: rotate(0deg); transform: rotate(0deg); }
+    100% { -ms-transform: rotate(360deg); transform: rotate(360deg); }
+  }
+  @keyframes pace-spinner {
+    0% { transform: rotate(0deg); transform: rotate(0deg); }
+    100% { transform: rotate(360deg); transform: rotate(360deg); }
+  }
+  /* 在下面修改进度条外观 */
+  .pace .pace-progress {
+    background: #1ef4fbec; /*进度条颜色*/
+    height: 3px;/* 进度条厚度 */
+  }
+  .pace .pace-progress-inner {
+    box-shadow: 0 0 10px #1ef4fbce, 0 0 5px #1ecffbd0; /*阴影颜色*/
+  }
+  .pace .pace-activity {
+    border-top-color: #1edafbe5;	/*上边框颜色*/
+    border-left-color: #1ef4fbec;	/*左边框颜色*/
+  }
+
+/* 最新文章 */
+#recent-posts>.recent-post-item {
+  position: relative;
+}
+
+
+/* 最新文章图标 */
+.newPost {
+  position: absolute;
+  top: 0;
+  color: rgba(255, 255, 255, 0.92);
+  padding: 0 15px;
+  /* background-color: #49b0f5b9; */
+  background-color: #c7356db9;
+  border-radius: 0 0 10px 10px;
+  right: 40px;
+}
+@media screen and (max-width:600px){
+.newPost {
+  right: 0px;
+  padding: 0 12px;
+  border-radius: 0 10px 0px 10px;
+}
+}
+
+/* 弹幕 */
+.comment-barrage {
+	position: fixed;
+	bottom: 0;
+	right: 55px;
+	padding: 0 0 30px 10px;
+	z-index: 100;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	align-items: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+	.comment-barrage {
+		display: none!important;
+	}
+}
+
+.comment-barrage-item {
+	min-width: 100px;
+	max-width: 200px;
+	width: fit-content;
+	min-height: 80px;
+	max-height: 144px;
+	margin: 4px 0;
+	padding: 8px;
+	background: rgba(0, 0, 0, 0.9);
+	backdrop-filter: blur(20px) saturate(180%);
+	border-radius: 8px;
+	color: #fff;
+	animation: barrageIn 0.3s cubic-bezier(.25, .01, .5, 1.5);
+	transition: 1s;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.comment-barrage-item.out {
+	opacity: 0;
+}
+
+@keyframes barrageIn {
+	0% {
+		transform: scale(0.1);
+	};
+	100% {
+		transform: scale(1.0);
+	}
+}
+
+
+
+.comment-barrage-item .barrageHead {
+	height: 30px;
+	padding: 0;
+	line-height: 30px;
+	font-size: 12px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.comment-barrage-item .barrageAvatar {
+	width: 16px;
+	height: 16px;
+	margin: 0;
+	border-radius: 50%;
+}
+
+.comment-barrage-item .barrageContent {
+	font-size: 14px;
+	height: calc(100% - 30px);
+	overflow: scroll;
+}
+
+.comment-barrage-item .barrageContent::-webkit-scrollbar {
+	height: 0;
+	width: 4px;
+}
+
+.comment-barrage-item .barrageContent::-webkit-scrollbar-button {
+	display: none;
+}
+:root{
+    --lyx-black:black;
+    --lyx-white:white;
+    --lyx-white-acrylic2:#fffa;
+    --lyx-black-acrylic2: #000a;
+}
