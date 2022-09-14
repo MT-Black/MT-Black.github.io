@@ -7,3 +7,9 @@
     font-family: 'HappyZcool';
     src: url('https://loko.upyun.img.lcoo.cc/font-family/HappyZcool.ttf');
 }
+/*电子钟字体*/
+@font-face {
+    font-family: 'UnidreamLED';
+    src: url("../font-family/UnidreamLED.ttf");
+    font-display: swap;
+  }

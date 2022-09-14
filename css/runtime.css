@@ -1,9 +1,3 @@
-/*电子钟字体*/
-@font-face {
-    font-family: 'UnidreamLED';
-    src: url("../font-family/UnidreamLED.ttf");
-    font-display: swap;
-  }
   div#runtime {
     width: 180px;
     margin: auto;
