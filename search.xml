@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Alist云盘-存储</title>
+      <link href="/340b5776/"/>
+      <url>/340b5776/</url>
+      
+        <content type="html"><![CDATA[<div class="tip home"><p>🗂️Alist云盘，是一款针对多种存储文件列表的程序<br>Alist在使用方面，容易上手，使用简单，新人可以直接通过<a href="https://alist.nn.ci/guide/install/script.html">文档</a>进行安装<br>该篇着重讲解Alist多种存储的使用和配置</p></div><div class="tip warning"><p>注意！注意！注意！<br>该文档请在Alist V3文档的监护下食用<br>同时切记：版本V3.0.0以上</p></div><h1 id="存储须知"><a href="#存储须知" class="headerlink" title="存储须知"></a>存储须知</h1><div class="note primary modern"><p>添加存储的挂在路径意思是指：<br>你的云盘的目录，并不是服务器内的目录</p></div><h2 id="缓存过期"><a href="#缓存过期" class="headerlink" title="缓存过期"></a>缓存过期</h2><p>缓存过期：目录结构的缓存时间。<br>当然如果你想<code>立即刷新</code>该盘内的文件，</p><div class="tabs" id="test1"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#test1-1">第一步</button></li><li class="tab"><button type="button" data-href="#test1-2">第二步</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="test1-1"><p>你可以直接点击<code>页面右下角</code><br><img src="https://pan.lcoo.cc/d/%F0%9F%8D%A8%20Resource/%F0%9F%93%81%20Private%20drawing%20bed/%E6%B7%BB%E5%8A%A0%E5%AD%98%E5%82%A8/1.png" alt=""></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test1-2"><p>在弹出的界面中点击<code>Refresh</code><br><img src="https://pan.lcoo.cc/d/%F0%9F%8D%A8%20Resource/%F0%9F%93%81%20Private%20drawing%20bed/%E6%B7%BB%E5%8A%A0%E5%AD%98%E5%82%A8/2.png" alt=""></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div><h2 id="Webdav-策略"><a href="#Webdav-策略" class="headerlink" title="Webdav 策略"></a>Webdav 策略</h2><ul><li>302重定向：重定向到真实的下载链接</li><li>使用代理 URL：重定向到代理 URL</li><li>本机代理：通过本地中转返回数据</li></ul><div class="note danger modern"><p>请根据自己的服务器上下行流量选择合适的选项</p></div><h1 id="阿里云盘"><a href="#阿里云盘" class="headerlink" title="阿里云盘"></a>阿里云盘</h1><p><mark>食用阿里云盘请注意！</mark><br><div class="tip info"><p>一定一定要注意，禁止大流量访问，大流量访问会封号<br>可以单独为这个存储的文件夹设置一个密码<br>自己访问，同时注意，在Alist云盘中<br>一些在阿里云盘无法分享的ZIP等压缩包文件，可以直接在这里复制链接分享给别人下载<br>同时可以不需要输入文件夹密码直接下载对应的文件</p></div></p><p><img src="https://pan.lcoo.cc/d/%F0%9F%8D%A8%20Resource/%F0%9F%93%81%20Private%20drawing%20bed/%E6%B7%BB%E5%8A%A0%E5%AD%98%E5%82%A8/3.png" alt=""></p><p>若上图看着不够清晰，请点击图片查阅</p><h2 id="挂载路径"><a href="#挂载路径" class="headerlink" title="挂载路径"></a>挂载路径</h2><p>上方说过挂在的路径就是你云盘的默认路径<br>云盘一开始是默认什么也没有的，所以他的默认路径就是<code>/</code><br>这里为了方便管理，可以输入<code>/Aliyun</code><br><img src="https://pan.lcoo.cc/d/%F0%9F%8D%A8%20Resource/%F0%9F%93%81%20Private%20drawing%20bed/%E6%B7%BB%E5%8A%A0%E5%AD%98%E5%82%A8/4.png" alt=""></p><h2 id="根文件夹ID"><a href="#根文件夹ID" class="headerlink" title="根文件夹ID"></a>根文件夹ID</h2><p>请登陆网页版<a href="https://www.aliyundrive.com/">阿里云盘</a>，登陆自己的账户<br>新建一个文件夹，不管叫什么名字，进去以后复制链接<br><img src="https://pan.lcoo.cc/d/%F0%9F%8D%A8%20Resource/%F0%9F%93%81%20Private%20drawing%20bed/%E6%B7%BB%E5%8A%A0%E5%AD%98%E5%82%A8/5.png" alt=""><br>复制我红色隐藏的区域，那一块为文件夹的ID</p><h2 id="刷新令牌"><a href="#刷新令牌" class="headerlink" title="刷新令牌"></a>刷新令牌</h2><p>访问<a href="https://alist.nn.ci/zh/guide/drivers/aliyundrive.html#%E5%88%B7%E6%96%B0%E4%BB%A4%E7%89%8C">Alist文档阿里云盘存储</a><br>点击获取Token，会出现二维码<br>手机登陆阿里云盘，扫描二维码点击确认登陆<br>在确认登陆完成以后，在网页点击<br><img src="https://pan.lcoo.cc/d/%F0%9F%8D%A8%20Resource/%F0%9F%93%81%20Private%20drawing%20bed/%E6%B7%BB%E5%8A%A0%E5%AD%98%E5%82%A8/6.png" alt=""><br>此时该页的二维码下面就会出现token<br>这个就是你的刷新令牌，将他复制到上图3的位置即可</p><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>点击添加即可，回到云盘首页便可以看到Aliyun，刚刚挂载路径的位置</p><h1 id="OneDrive-and-SharePoint"><a href="#OneDrive-and-SharePoint" class="headerlink" title="OneDrive and SharePoint"></a>OneDrive and SharePoint</h1><p>待更……</p><p>不懂的问题可以评论留言</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Alist </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Alist </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2022-09-10 更新日志</title>
       <link href="/ddfec28a/"/>
       <url>/ddfec28a/</url>
