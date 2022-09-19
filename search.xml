@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Alist云盘-常见问题</title>
+      <link href="/32f842f0/"/>
+      <url>/32f842f0/</url>
+      
+        <content type="html"><![CDATA[<h1 style="text-align:center">常见问题汇总</h1><h1 id="安装-升级后打开网页时出现错误failed-get-storage-can’t-find-storage-with-rawPath-？"><a href="#安装-升级后打开网页时出现错误failed-get-storage-can’t-find-storage-with-rawPath-？" class="headerlink" title="安装/升级后打开网页时出现错误failed get storage: can’t find storage with rawPath: /？"></a>安装/升级后打开网页时出现错误failed get storage: can’t find storage with rawPath: /？</h1><p>安装或升级以后，没有任何存储，需要自己手动添加存储。<br>这里提供方便补上一个后端链接<code>域名/@login</code><br>安装完成以后默认账号：admin<br>密码请见alist文档的具体审阅方法</p><h1 id="添加新存储时收到错误“Failed-create-storage-in-database-UNIQUE-constraint-failed-x-storages-mount-path”？"><a href="#添加新存储时收到错误“Failed-create-storage-in-database-UNIQUE-constraint-failed-x-storages-mount-path”？" class="headerlink" title="添加新存储时收到错误“Failed create storage in database: UNIQUE constraint failed: x_storages.mount_path”？"></a>添加新存储时收到错误“Failed create storage in database: UNIQUE constraint failed: x_storages.mount_path”？</h1><p>因为<code>挂载路径</code>是独一无二的。<br>若挂在路径<code>/</code>绑定了某个盘，那么这个挂载路径就被这个盘占用了，其他的盘没有办法在这里挂载其他云盘。<br>例子：<br>A云盘挂载路径为<code>/</code>，则B云盘不能挂载在<code>/</code>或者<code>/</code>内的A云盘的文件夹内。<br>B云盘只能挂载在<code>/</code>新建的文件夹内（/是云盘默认根目录）<br>若对上方的默认根目录不理解，可以看<a href="/340b5776/">这篇文章</a></p><h1 id="添加存储或者修改元信息出现Strconv-Atoi-parsting””-invalid-syntax"><a href="#添加存储或者修改元信息出现Strconv-Atoi-parsting””-invalid-syntax" class="headerlink" title="添加存储或者修改元信息出现Strconv.Atoi: parsting””: invalid syntax"></a>添加存储或者修改元信息出现Strconv.Atoi: parsting””: invalid syntax</h1><p>该错误为要么你的域名挂了CDN，<code>Docker</code>环境可以通过将后台的API地址更改为IP+端口进入后台可以修改元信息和存储内容<br>改完之后在改回去。<br>当然还有一种 API地址为空值的话，直接用<code>IP访问</code>也是可以的，域名似乎还是不允许，<code>只能通过源地址</code>修改存储或元信息</p><h1 id="访问页面出现错误System-error-TypeError-n-replaceAll-is-not-a-function"><a href="#访问页面出现错误System-error-TypeError-n-replaceAll-is-not-a-function" class="headerlink" title="访问页面出现错误System error: TypeError: n.replaceAll is not a function"></a>访问页面出现错误System error: TypeError: n.replaceAll is not a function</h1><p>这种错误是浏览器内核版本过低，不支持String.prototype.replaceAll(es2021)方法可以先换个能打开的浏览器在后台手动添加polyfill<br>添加方法在后台设置里，自定义头部或者body，添加以下代码<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">&quot;https://polyfill.io/v3/polyfill.min.js?features=String.prototype.replaceAll&quot;</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p><h1 id="登陆页面打开2FA验证，每次登陆觉得麻烦"><a href="#登陆页面打开2FA验证，每次登陆觉得麻烦" class="headerlink" title="登陆页面打开2FA验证，每次登陆觉得麻烦"></a>登陆页面打开2FA验证，每次登陆觉得麻烦</h1><p>Alist群内解释<br>去Alist目录下输入<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Linux：   ./alist cancel2fa</span><br><span class="line">Windows： alist.exe cancel2fa</span><br></pre></td></tr></table></figure></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Alist </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Alist </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Alist云盘-存储</title>
       <link href="/340b5776/"/>
       <url>/340b5776/</url>
