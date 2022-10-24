@@ -121,3 +121,7 @@
     position: relative;
     padding:10px 30px/*如果文字间隔不合理可以微调修改，第二个是水平方向的padding，第一个是垂直的*/
 }
+#page-header.not-top-img #nav a {
+    font-weight: bold;
+    font-size: 18px;
+}
